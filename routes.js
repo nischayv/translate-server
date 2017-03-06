@@ -11,7 +11,7 @@ module.exports = router;
 router.post('/api/process', function(req, res) {
   console.log('posted');
   const visionClient = Vision({
-    projectId: 'translate-160601'
+    projectId: process.env.PROJECT_ID
   });
 
   visionClient.detectText(req.body.image)
